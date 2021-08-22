@@ -86,9 +86,8 @@ self.addEventListener("fetch", (event) => {
   // if (url.origin !== self.origin) {
   //   return
   // }
-  console.log("custom", req.url);
+
   if (req.url.includes("newsapi.org")) {
-    console.log("http", req.url);
     event.respondWith(networkFirst(req));
   } else {
     event.respondWith(cacheFirst(req));

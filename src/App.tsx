@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
+
 import "./App.css";
+import { Button } from "antd";
 
 function App() {
   const [list, setList] = useState([]);
@@ -16,14 +17,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      {list.map((item: any, index: number) => (
-        <div key={index}>
-          <h2>{item.title}</h2>
-          <span>{item?.author}</span>
-          <p>{item?.description}</p>
-          <img src={item?.urlToImage} alt="" />
-        </div>
-      ))}
+      <Button type="primary">demo</Button>
     </div>
   );
 }
