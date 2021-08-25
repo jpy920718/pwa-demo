@@ -1,24 +1,22 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import { Button } from "antd";
 
+import Loading from "./components/Loading";
+import Home from "./components/Home";
+const NewDetail = React.lazy(() => import("./components/NewsDetail"));
 function App() {
-  const [list, setList] = useState([]);
-  const getNewsList = async () => {
-    const result = await fetch(
-      "https://newsapi.org/v2/everything?q=tesla&from=2021-07-18&sortBy=publishedAt&apiKey=3a4b989039104e968a6aab80811af288"
-    ).then((res) => res.json());
-    setList(result.articles);
-    console.log(result);
-  };
-  useEffect(() => {
-    getNewsList();
-  }, []);
   return (
-    <div className="App">
-      <Button type="primary">demo</Button>
-    </div>
+    <Router>
+      <React.Suspense fallback={<Loading />}>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/detail">
+          <NewDetail />
+        </Route>
+      </React.Suspense>
+    </Router>
   );
 }
 

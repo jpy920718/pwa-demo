@@ -57,8 +57,7 @@ registerRoute(
 // precache, in this case same-origin .png requests like those from in public/
 registerRoute(
   // Add in any other file extensions or routing criteria as needed.
-  ({ url }) =>
-    url.origin === self.location.origin && url.pathname.endsWith(".png"),
+  ({ url }) => url.pathname.endsWith(".png") || url.pathname.endsWith(".jpg"),
   // Customize this strategy as needed, e.g., by changing to CacheFirst.
   new StaleWhileRevalidate({
     cacheName: "images",
@@ -121,8 +120,8 @@ async function networkFirst(req: any) {
     const cached = await cache.match(req);
     if (cached) {
       return cached;
-    }else {
-      return new Response()
+    } else {
+      return new Response();
     }
   }
 }
