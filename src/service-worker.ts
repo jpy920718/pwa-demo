@@ -84,12 +84,8 @@ self.addEventListener("message", (event) => {
 const cacheName = "api";
 self.addEventListener("fetch", (event) => {
   const req = event.request;
-  const url = new URL(req.url);
-  // if (url.origin !== self.origin) {
-  //   return
-  // }
-
-  if (req.url.includes("newsapi.org")) {
+  
+  if (req.url.includes("uploadbeta.com")) {
     event.respondWith(networkFirst(req));
   } else {
     event.respondWith(cacheFirst(req));
