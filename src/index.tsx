@@ -14,6 +14,8 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() belowdfdfd. Note this comes widfdfdth some pitfalls.
 // Learn more about service workers: https:/ffdfdf/cra.link/PWA
+// unregister() to register() belowdfdfd. Note333 this comes with some pitfalls.
+// Learn more about service workers: https://cra.link/PWA
 serviceWorkerRegistration.register();
 
 // if (Notification.permission === "default") {
