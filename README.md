@@ -1,2 +1,2 @@
 # pwa-demo11-11
-This is an application that uses PWAfdfd1232333333334444
+This is an application that uses PWA22
