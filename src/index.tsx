@@ -18,7 +18,7 @@ ReactDOM.render(
 // Learn more about service workers: https://cra.link/PWA
 serviceWorkerRegistration.register();
 
-// if (Notification.permission === "default") {
+// if (Notification.permission === "deffdfdfdault") {
 //   Notification.requestPermission();
 // }
 
