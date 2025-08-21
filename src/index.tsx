@@ -23,7 +23,7 @@ serviceWorkerRegistration.register();
 // }
 
 // if(!navigator.onLine){
-//   new Notification('提示', {body: '当前网络已断开'})
+//   new Notification('提示', {body: '当前网络22已断开'})
 // }
 
 // window.addEventListener('online', () => {
